@@ -11,5 +11,58 @@
     />
     <title>BMI Calculator</title>
   </head>
-  <body></body>
+  <body>
+    <div class="calculator__body">
+      <div class="calculator__header">
+        <h1>BMI Calculator</h1>
+      </div>
+      <div class="calculator__main">
+        <div class="calculator__container">
+          <div class="calculator__gender">
+            <div class="male">
+              <img src="./img/male.svg" alt="" />
+              <h2>Male</h2>
+            </div>
+            <div class="female">
+              <img src="./img/female.svg" alt="" />
+              <h2>Female</h2>
+            </div>
+          </div>
+          <div class="calculator__height">
+            <h3>Height</h3>
+            <label for="height" id="height__label">70<span>cm</span></label>
+            <input
+              class="height__range"
+              name="height"
+              type="range"
+              min="0"
+              max="240"
+              value="70"
+            />
+          </div>
+          <div class="calculator__parameters">
+            <div class="calculator__weight">
+              <h3>Weight</h3>
+              <label for="weight" id="weight__label">60</label>
+              <div class="btn">
+                <button class="btn__minus">-</button>
+                <button class="btn__plus">+</button>
+              </div>
+            </div>
+            <div class="calculator__age">
+              <h3>Age</h3>
+              <label for="age" id="age__label">25</label>
+              <div class="btn">
+                <button class="btn__minus">-</button>
+                <button class="btn__plus">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calculator__footer">
+        <button class="btn__calculate">Calculate</button>
+      </div>
+    </div>
+  </body>
 </html>
