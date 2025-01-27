@@ -108,6 +108,13 @@ body {
   justify-content: center;
 }
 
+.calculator__container {
+  max-width: 390px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
 h1 {
   font-weight: 600;
   font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
@@ -122,4 +129,250 @@ h3 {
 
 h3 {
   font-weight: 300;
+}
+
+.calculator__body {
+  width: clamp(18.75rem, 17.386rem + 6.82vw, 22.5rem);
+  border-radius: 25px;
+  background-color: #1c2135;
+  overflow: hidden;
+}
+
+.calculator__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 13px 0;
+  background-color: #24263b;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.calculator__main {
+  flex-grow: 1;
+}
+
+.calculator__gender {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.male,
+.female {
+  padding: 24px 24px 17px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 20px;
+  background-color: #24263b;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.male.active {
+  background-color: #333244;
+}
+
+.female.active {
+  background-color: #333244;
+}
+
+.female {
+  padding: 24px 40px;
+}
+
+.male img {
+  width: 96px;
+  aspect-ratio: 1;
+}
+
+.female img {
+  width: 66px;
+  height: 102px;
+}
+
+.calculator__height {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333244;
+  border-radius: 12px;
+  margin-top: 25px;
+  padding: 24px 25px 65px;
+}
+
+#height__label {
+  margin: 6px 0 20px;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+#height__label span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.height__range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  max-width: 270px;
+  height: 2px;
+  outline: none;
+  margin: 20px 0;
+  background: transparent;
+}
+
+/* Стили для трека (дорожеки) */
+.height__range::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Стили для трека при активном взаимодействии */
+.height__range:active::-webkit-slider-runnable-track {
+  background: #e83d67; /* Розовый при перетаскивании */
+}
+
+/* Стили для бегунка */
+.height__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #e83d67;
+  border-radius: 100%;
+  margin-top: -3px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.height__range::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  background: #e83d67;
+  border-radius: 100%;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+/* Ховер-эффекты */
+.height__range::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.height__range::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+.calculator__parameters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.calculator__weight,
+.calculator__age {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  width: 155px;
+  height: 180px;
+  background-color: #24263b;
+}
+
+.calculator__weight label,
+.calculator__age label {
+  font-weight: 700;
+  font-size: 40px;
+  margin: 5px 0 20px;
+}
+
+.btn {
+  display: flex;
+  column-gap: 42px;
+}
+
+.weight__decrease,
+.weight__increase,
+.age__increase,
+.age__decrease {
+  padding: 8px 15px;
+  font-weight: 600;
+  font-size: 26px;
+  background-color: #8b8c9e;
+  border-radius: 100%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.calculator__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 0;
+  margin-top: 25px;
+  background-color: #e83d67;
+}
+
+.btn__calculate,
+.btn__recalculate {
+  font-weight: 600;
+  font-size: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.calculator__result {
+  max-width: 390px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.result__container {
+  background-color: #333244;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 35px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.result__title {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.136rem + 1.82vw, 2.5rem);
+  margin: 25px 0;
+}
+
+.result__status {
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+}
+
+.result__bmi {
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: clamp(2rem, 1.273rem + 3.64vw, 4rem);
+}
+
+.result__description {
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  color: #8b8c9e;
 }
