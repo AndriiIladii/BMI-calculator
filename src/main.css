@@ -170,6 +170,14 @@ h3 {
   cursor: pointer;
 }
 
+.male.active {
+  background-color: #333244;
+}
+
+.female.active {
+  background-color: #333244;
+}
+
 .female {
   padding: 24px 40px;
 }
@@ -292,8 +300,10 @@ h3 {
   column-gap: 42px;
 }
 
-.btn__plus,
-.btn__minus {
+.weight__decrease,
+.weight__increase,
+.age__increase,
+.age__decrease {
   padding: 8px 15px;
   font-weight: 600;
   font-size: 26px;
@@ -311,7 +321,58 @@ h3 {
   background-color: #e83d67;
 }
 
-.btn__calculate {
+.btn__calculate,
+.btn__recalculate {
   font-weight: 600;
   font-size: 32px;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+.calculator__result {
+  max-width: 390px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.result__container {
+  background-color: #333244;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 35px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.result__title {
+  font-weight: 700;
+  font-size: clamp(1.5rem, 1.136rem + 1.82vw, 2.5rem);
+  margin: 25px 0;
+}
+
+.result__status {
+  margin-bottom: 35px;
+  font-weight: 700;
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+}
+
+.result__bmi {
+  margin-bottom: 60px;
+  font-weight: 700;
+  font-size: clamp(2rem, 1.273rem + 3.64vw, 4rem);
+}
+
+.result__description {
+  font-weight: 500;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  color: #8b8c9e;
 }

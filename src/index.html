@@ -43,25 +43,34 @@
           <div class="calculator__parameters">
             <div class="calculator__weight">
               <h3>Weight</h3>
-              <label for="weight" id="weight__label">60</label>
+              <label for="weight" id="weight__label">50</label>
               <div class="btn">
-                <button class="btn__minus">-</button>
-                <button class="btn__plus">+</button>
+                <button class="weight__decrease">-</button>
+                <button class="weight__increase">+</button>
               </div>
             </div>
             <div class="calculator__age">
               <h3>Age</h3>
               <label for="age" id="age__label">25</label>
               <div class="btn">
-                <button class="btn__minus">-</button>
-                <button class="btn__plus">+</button>
+                <button class="age__decrease">-</button>
+                <button class="age__increase">+</button>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="calculator__result hidden">
+          <p class="result__title">Your Result</p>
+          <div class="result__container">
+            <p class="result__status"></p>
+            <p class="result__bmi"></p>
+            <p class="result__description"></p>
           </div>
         </div>
       </div>
       <div class="calculator__footer">
         <button class="btn__calculate">Calculate</button>
+        <button class="btn__recalculate hidden">Re-Calculate</button>
       </div>
     </div>
   </body>
